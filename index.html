@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Summarizer</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PDF Document Summarizer</h1>
+            <p>Upload a PDF document to get an AI-generated summary</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-box" id="uploadBox">
+                <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                </svg>
+                <p>Drag and drop a PDF here or click to browse</p>
+                <input type="file" id="fileInput" accept=".pdf" hidden>
+                <button id="browseBtn" class="btn-primary">Browse Files</button>
+            </div>
+            <div id="fileName" class="file-name"></div>
+        </div>
+
+        <div class="summary-section" id="summarySection" style="display: none;">
+            <h2>Summary</h2>
+            <div class="summary-box">
+                <div id="loadingSpinner" class="spinner" style="display: none;">
+                    <div class="spinner-circle"></div>
+                    <p>Generating summary...</p>
+                </div>
+                <div id="summaryText" class="summary-text"></div>
+            </div>
+            <button id="resetBtn" class="btn-secondary">Upload Another PDF</button>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
